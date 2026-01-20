@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "The Tembo Group investment",
+  title: "The Tembo Group Investment",
   description:
     "Delivering quality infrastructure solutions on time, on budget, and to industry standards.",
 };
