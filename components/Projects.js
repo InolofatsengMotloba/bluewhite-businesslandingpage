@@ -1,32 +1,55 @@
 import Image from "next/image";
 
 const ongoingProjects = [
-  { title: "Industrial Hub A", location: "Dammam, KSA", year: "2026" },
   {
-    title: "Port Expansion Phase II",
-    location: "Jebel Ali, UAE",
+    title: "Anglo RBMR - Robust Low Nickel Plant",
+    description: "Civil works & earthworks",
+    client: "WBHO Construction",
+    value: "R7.3 Million",
+    duration: "9 Months",
     year: "2026",
+    location: "Rustenburg, SA",
+  },
+  {
+    title: "Anglo American Platinum - Precious Metal Refinery (DAM2)",
+    description: "Earthworks for storage pad ",
+    client: "WBHO Construction",
+    value: "R11 million",
+    duration: "6 Months",
+    year: "2026",
+    location: "Rustenburg, SA",
   },
 ];
 
 const completedProjects = [
-  { title: "Railway Logistics Center", location: "Riyadh, KSA", year: "2025" },
-  { title: "Warehouse Delta", location: "Doha, Qatar", year: "2024" },
-  { title: "Smart Terminal Upgrade", location: "Salalah, Oman", year: "2024" },
   {
-    title: "Regional Distribution Wing",
-    location: "Kuwait City, KW",
-    year: "2023",
+    title: "Internal Roads & Paving - Reagile Ext. 6, Koster",
+    client: "Kgetlengrivier Local Municipality",
+    value: "R12.6 million",
+  },
+  {
+    title: "Admin Building Construction - Ditsobotla Local Municipality ",
+    client: "Ariona Consultants",
+    value: "R4.8 million",
+  },
+  {
+    title: "Road Maintenance - Brandfort Internal Roads",
+    client: "Ariona Consultants",
+    value: "R1.45 million",
+  },
+  {
+    title: "Emergency Repairs & Building Maintenance",
+    client: "Ditsong Museums of South Africa ",
+    value: "R4.75 million",
   },
 ];
 
 export default function Projects() {
   return (
-    <section className="relative w-full bg-[#212471]">
-      {/* Background with Next.js Image */}
+    <section id="projects" className="relative w-full bg-[#212471]">
       <div className="absolute inset-0">
         <Image
-          src="/BG1.jpg"
+          src="/BG6.jpg"
           alt="Construction background"
           fill
           className="object-cover"
@@ -36,34 +59,33 @@ export default function Projects() {
       </div>
 
       <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 lg:px-24 flex flex-col lg:flex-row gap-16">
-        {/* LEFT SIDE: Sticky Heading - Adjusted to start at pt-20 */}
+        {/* LEFT SIDE: Sticky Heading */}
         <div className="lg:w-1/3 pt-20 pb-20">
           <div className="lg:sticky lg:top-40">
             <h2 className="text-4xl md:text-5xl font-bold text-white leading-[1.1] tracking-tight">
-              Executing <br />
-              Visionary <br />
-              Projects.
+              Proven <br />
+              Project <br />
+              Experience.
             </h2>
             <div className="mt-8 w-16 h-0.5 bg-white"></div>
             <p className="text-white/60 mt-8 text-[13px] leading-relaxed max-w-xs uppercase tracking-widest">
-              From conception to completion, we deliver infrastructure that
-              stands the test of time.
+              Trusted on High-Value, High-Risk Projects
             </p>
           </div>
         </div>
 
         {/* RIGHT SIDE: Scrollable List */}
-        <div className="lg:w-2/3 pt-20 pb-20 space-y-16">
+        <div className="lg:w-2/3 pt-20 pb-20 space-y-20">
           {/* Ongoing Section */}
           <div>
-            <div className="mb-8">
+            <div className="mb-10">
               <h3 className="text-white text-[14px] font-black tracking-[0.3em] uppercase">
                 Ongoing Projects
               </h3>
               <div className="mt-2 w-full h-px bg-white/20"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {ongoingProjects.map((project, index) => (
                 <ProjectBlock key={index} project={project} isOngoing={true} />
               ))}
@@ -72,14 +94,14 @@ export default function Projects() {
 
           {/* Completed Section */}
           <div>
-            <div className="mb-8">
+            <div className="mb-10">
               <h3 className="text-white/50 text-[14px] font-black tracking-[0.3em] uppercase">
                 Completed Works
               </h3>
               <div className="mt-2 w-full h-px bg-white/10"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {completedProjects.map((project, index) => (
                 <ProjectBlock key={index} project={project} isOngoing={false} />
               ))}
@@ -91,31 +113,68 @@ export default function Projects() {
   );
 }
 
-// Block Component to match "Why Choose Us" style
 function ProjectBlock({ project, isOngoing }) {
   return (
     <div
-      className={`p-8 border-2 transition-all duration-500 flex flex-col justify-between h-55 ${
+      className={`group p-8 border transition-all duration-500 flex flex-col justify-between min-h-55 ${
         isOngoing
-          ? "border-white opacity-100 shadow-xl bg-white/5"
-          : "border-white/10 opacity-60 hover:opacity-100 hover:border-white/30"
+          ? "border-white/20 bg-white/3 shadow-2xl"
+          : "border-white/5 opacity-60 hover:opacity-100 hover:border-white/20 hover:bg-white/2"
       }`}
     >
       <div>
-        <h4 className="text-lg font-bold text-white mb-2">{project.title}</h4>
-        <p className="text-[12px] text-white/50 tracking-widest uppercase">
+        <div className="flex justify-between items-start mb-4">
+          <span className="text-[10px] font-mono text-white/40 tracking-tighter">
+            {project.duration && ` ${project.duration}`}
+          </span>
+          {isOngoing && (
+            <div className="flex items-center gap-2">
+              <span className="text-[9px] text-green-400 font-bold uppercase tracking-widest">
+                Active
+              </span>
+              <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></div>
+            </div>
+          )}
+        </div>
+
+        <h4 className="text-lg font-bold text-white mb-2 leading-tight group-hover:text-gray-400 transition-colors">
+          {project.title}
+        </h4>
+
+        {project.description && (
+          <p className="text-white/60 text-xs mb-4">{project.description}</p>
+        )}
+
+        {/* <p className="text-[11px] text-white/40 tracking-[0.15em] uppercase">
           {project.location}
-        </p>
+        </p> */}
       </div>
 
-      <div className="flex justify-between items-end">
-        <span className="text-[10px] font-mono text-white/40">
-          {project.year}
-        </span>
-        {isOngoing && (
-          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-        )}
-      </div>
+      {/* Technical Details Footer - Only shows if data exists */}
+      {(project.client || project.value) && (
+        <div className="mt-6 pt-4 border-t border-white/5 flex justify-between items-end">
+          {project.client && (
+            <div className="flex flex-col">
+              <span className="text-[9px] text-white/30 uppercase tracking-tighter">
+                Client
+              </span>
+              <span className="text-white/70 text-[11px] font-medium">
+                {project.client}
+              </span>
+            </div>
+          )}
+          {project.value && (
+            <div className="flex flex-col items-end">
+              <span className="text-[9px] text-white/30 uppercase tracking-tighter">
+                Contract Value
+              </span>
+              <span className="text-white text-[12px] font-mono">
+                {project.value}
+              </span>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }
