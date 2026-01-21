@@ -38,7 +38,7 @@ export default function Projects() {
       <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 lg:px-24 flex flex-col lg:flex-row gap-16">
         {/* LEFT SIDE: Sticky Heading - Adjusted to start at pt-20 */}
         <div className="lg:w-1/3 pt-20 pb-20">
-          <div className="lg:sticky lg:top-20">
+          <div className="lg:sticky lg:top-40">
             <h2 className="text-4xl md:text-5xl font-bold text-white leading-[1.1] tracking-tight">
               Executing <br />
               Visionary <br />
