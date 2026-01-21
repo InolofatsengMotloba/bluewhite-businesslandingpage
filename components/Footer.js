@@ -12,9 +12,9 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="relative text-white">
+    <footer className="relative text-white bg-[#212471]">
       {/* Background Image */}
-      <div className="absolute inset-0 -z-10">
+      {/* <div className="absolute inset-0 -z-10">
         <Image
           src="/BG7.jpg"
           alt="Footer background"
@@ -23,8 +23,8 @@ export default function Footer() {
           priority
         />
         {/* Overlay */}
-        <div className="absolute inset-0 bg-[#212471]/80" />
-      </div>
+        {/* <div className="absolute inset-0 bg-[#212471]/80" />
+      </div> */} 
 
       <div className="max-w-7xl mx-auto px-6 py-16">
         {/* Mobile: 2 columns (Navigation/Services side-by-side)
