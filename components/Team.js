@@ -30,7 +30,7 @@ export default function Team() {
           {departments.map((dept, index) => (
             <div
               key={index}
-              className="group flex items-center justify-between py-6 border-b border-white/10 hover:bg-white/[0.02] transition-colors"
+              className="group flex items-center justify-between py-6 border-b border-white/10 hover:bg-white/2 transition-colors"
             >
               <div className="flex items-center gap-6">
                 <span className="text-[10px] font-bold text-gray-500 tracking-widest">
@@ -40,7 +40,7 @@ export default function Team() {
                   {dept}
                 </h3>
               </div>
-              <div className="hidden md:block w-12 h-[1px] bg-white/20 group-hover:w-20 transition-all duration-500"></div>
+              <div className="hidden md:block w-12 h-px bg-white/20 group-hover:w-20 transition-all duration-500"></div>
             </div>
           ))}
         </div>

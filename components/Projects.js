@@ -60,7 +60,7 @@ export default function Projects() {
               <h3 className="text-white text-[14px] font-black tracking-[0.3em] uppercase">
                 Ongoing Projects
               </h3>
-              <div className="mt-2 w-full h-[1px] bg-white/20"></div>
+              <div className="mt-2 w-full h-px bg-white/20"></div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -76,7 +76,7 @@ export default function Projects() {
               <h3 className="text-white/50 text-[14px] font-black tracking-[0.3em] uppercase">
                 Completed Works
               </h3>
-              <div className="mt-2 w-full h-[1px] bg-white/10"></div>
+              <div className="mt-2 w-full h-px bg-white/10"></div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -95,7 +95,7 @@ export default function Projects() {
 function ProjectBlock({ project, isOngoing }) {
   return (
     <div
-      className={`p-8 border-2 transition-all duration-500 flex flex-col justify-between h-[220px] ${
+      className={`p-8 border-2 transition-all duration-500 flex flex-col justify-between h-55 ${
         isOngoing
           ? "border-white opacity-100 shadow-xl bg-white/5"
           : "border-white/10 opacity-60 hover:opacity-100 hover:border-white/30"
