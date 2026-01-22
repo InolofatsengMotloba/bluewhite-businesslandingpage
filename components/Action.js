@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Action() {
   return (
-    <section className="relative w-full overflow-hidden">
+    <section id="contact" className="relative w-full overflow-hidden">
       {/* Background image */}
       <Image
         src="/BG10.jpg"
