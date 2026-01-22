@@ -2,7 +2,10 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section className="bg-[#F1F1F1] py-24 px-6 md:px-12 lg:px-24 font-sans overflow-hidden">
+    <section
+      id="about"
+      className="bg-[#F1F1F1] py-24 px-6 md:px-12 lg:px-24 font-sans overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
         {/* Left: Image Container with Accent */}
         <div className="lg:w-1/2 relative">

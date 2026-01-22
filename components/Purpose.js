@@ -2,7 +2,10 @@ import React from "react";
 
 export default function Purpose() {
   return (
-    <section className="bg-[#212471] text-white py-20 px-6 md:px-12 lg:px-24 border-b border-white/10">
+    <section
+      id="purpose"
+      className="bg-[#212471] text-white py-20 px-6 md:px-12 lg:px-24 border-b border-white/10"
+    >
       <div className="max-w-7xl mx-auto h-full flex flex-col justify-center">
         {/* Container for the 50/50 Split */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-0 relative">
