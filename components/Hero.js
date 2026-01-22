@@ -11,7 +11,7 @@ export default function Hero() {
         {/* LEFT COLUMN: Content */}
         <div className="relative flex flex-col justify-center px-8 lg:px-24 py-20 z-20 bg-[#F1F1F1]">
           {/* Subtle Background Watermark */}
-          <span className="absolute top-10 left-10 text-[12rem] font-black text-black/[0.03] select-none pointer-events-none">
+          <span className="absolute top-10 left-10 text-[12rem] font-black text-black/3 select-none pointer-events-none">
             TEMBO
           </span>
 
@@ -25,7 +25,7 @@ export default function Hero() {
             </h1>
 
             <p className="mt-8 text-gray-600 max-w-md text-base md:text-lg leading-relaxed font-light">
-              Tembo Group Investment is a 100% black youth-owned firm
+              Tembo Group Investment is a civil construction company
               specializing in heavy earthworks and professional built
               environment consulting for the mining and public sectors.
             </p>
@@ -34,12 +34,12 @@ export default function Hero() {
               <button className="bg-[#212471] text-white text-[13px] font-bold tracking-[0.2em] uppercase px-10 py-5 hover:bg-[#2a2e8c] transition-all shadow-xl">
                 Start A Project
               </button>
-              <button className="group text-[#212471] text-[13px] font-bold tracking-[0.2em] uppercase flex items-center gap-3">
+              {/* <button className="group text-[#212471] text-[13px] font-bold tracking-[0.2em] uppercase flex items-center gap-3">
                 Our Story
                 <span className="group-hover:translate-x-2 transition-transform duration-300">
                   <FaArrowRight size={14} />
                 </span>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
@@ -69,9 +69,9 @@ export default function Hero() {
           <div className="flex h-32">
             {/* Blue Stat */}
             <div className="bg-[#212471] flex-1 flex flex-col justify-center px-10 text-white">
-              <h3 className="text-3xl font-bold">350+</h3>
+              <h3 className="text-3xl font-bold">100%</h3>
               <p className="text-[10px] tracking-widest uppercase opacity-60">
-                Professional Workers
+                Black Youth Owned
               </p>
             </div>
 
