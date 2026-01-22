@@ -3,51 +3,44 @@ import Image from "next/image";
 export default function Action() {
   return (
     <section className="relative w-full overflow-hidden">
-      {/* Fixed, shallow height so it reveals fully with footer */}
-      <div className="relative h-55 sm:h-65">
-        {/* Background image */}
-        <Image
-          src="/BG10.jpg"
-          alt="Construction background"
-          fill
-          className="object-cover"
-          priority
-        />
+      {/* Background image */}
+      <Image
+        src="/BG10.jpg"
+        alt="Footer background"
+        fill
+        priority
+        className="object-cover"
+      />
 
-        {/* Brand overlay */}
-        <div className="absolute inset-0 bg-[#212471]/85" />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-[#212471]/90" />
 
-        {/* Content */}
-        <div className="relative z-10 h-full">
-          <div className="max-w-7xl mx-auto h-full px-6 grid grid-cols-1 md:grid-cols-2 items-center">
-            {/* LEFT: Text content */}
-            <div className="max-w-xl">
-              <h2 className="text-white text-2xl sm:text-3xl font-semibold tracking-tight">
-                Let's Build With Confidence
-              </h2>
+      {/* CTA content */}
+      <div className="relative z-10">
+        <div className="max-w-7xl mx-auto px-6 pt-14">
+          <div className="flex flex-col gap-6 rounded-xl bg-white/5 px-6 py-6 backdrop-blur-md md:flex-row md:items-center md:justify-between">
+            {/* Logo */}
+            <Image
+              src="/LightLogo.png"
+              alt="The Tembo Group logo"
+              width={130}
+              height={40}
+              className="object-contain"
+            />
 
-              <p className="mt-3 text-sm sm:text-base text-[#F1F1F1]/80 leading-relaxed">
-                Partner with The Tembo Group Investment for dependable civil
-                construction and earthworks solutions
-              </p>
+            {/* Text */}
+            <p className="text-sm text-[#F1F1F1]/90 text-center md:text-left">
+              Let’s build with confidence. Reliable civil construction &
+              earthworks solutions.
+            </p>
 
-              <div className="mt-6">
-                <a
-                  href="tel:+27615177507"
-                  className="inline-flex items-center justify-center rounded-md border border-white/30 px-6 py-2 text-sm font-medium text-white hover:bg-white hover:text-[#212471] transition-colors duration-200"
-                >
-                  Get in touch
-                </a>
-              </div>
-            </div>
-
-            {/* RIGHT: Quiet structural balance */}
-            <div className="hidden md:flex h-full items-center justify-end">
-              <div className="relative h-40 w-px bg-white/20">
-                {/* Subtle accent block */}
-                <span className="absolute top-0 -right-px h-10 w-0.75 bg-white/60" />
-              </div>
-            </div>
+            {/* Action */}
+            <a
+              href="tel:+27615177507"
+              className="inline-flex items-center justify-center rounded-md bg-white px-5 py-2 text-sm font-medium text-[#212471] hover:bg-white/90 transition-colors"
+            >
+              Get in touch
+            </a>
           </div>
         </div>
       </div>
