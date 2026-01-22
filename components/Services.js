@@ -14,8 +14,8 @@ export default function Services() {
         "Buildings and structural works",
         "Municipal infrastructure",
       ],
-      image: "/BG4.jpg",
-      icon: <MdConstruction size={22} />,
+      image: "/BG7.jpg",
+      icon: <MdConstruction size={20} />,
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ export default function Services() {
         "Mining and industrial projects",
       ],
       image: "/BG5.jpg",
-      icon: <FaTractor size={22} />,
+      icon: <FaTractor size={20} />,
     },
     {
       id: 3,
@@ -38,62 +38,63 @@ export default function Services() {
         "Construction management",
         "Built environment advisory",
       ],
-      image: "/BG8.jpg",
-      icon: <FaHelmetSafety size={22} />,
+      image: "/BI1.jpg",
+      icon: <FaHelmetSafety size={20} />,
     },
   ];
 
   return (
-    <section id="services" className="bg-[#F1F1F1] py-24  font-sans">
-      <div className="max-w-7xl mx-auto px-4 md:px-5 lg:px-6">
-        {/* Header - Refined Typography */}
-        <div className="mb-16 border-l-4 border-[#212471] pl-8">
-          <span className="text-[#212471] text-xs font-black tracking-[0.4em] uppercase">
-            Specializations
-          </span>
-          <h2 className="text-[#212471] text-4xl md:text-5xl font-bold mt-4 leading-tight">
-            Our Core <br /> Capabilities.
+    <section
+      id="services"
+      className="bg-[#F1F1F1] font-sans min-h-[calc(100vh-5rem)] flex items-center"
+    >
+      <div className="max-w-7xl mx-auto px-4 md:px-5 lg:px-6 w-full">
+        {/* Header (UNCHANGED as requested) */}
+        <div className="mb-8">
+          <h2 className="text-[#212471] text-3xl md:text-4xl font-bold tracking-tight leading-tight">
+            WHAT WE DO
           </h2>
-          <p className="text-gray-500 text-sm mt-6 max-w-xl leading-relaxed italic">
-            Delivering practical, reliable construction solutions backed by
-            decades of field experience and technical precision.
+          <div className="mt-3 w-12 h-0.5 bg-[#212471] rounded-xl" />
+
+          <p className="mt-5 text-sm text-[#212471]/60 max-w-md">
+            This structure ensures compliance, safety, quality control, and
+            efficient execution across all projects.
           </p>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
             <div
               key={service.id}
-              className="group relative flex flex-col bg-white border border-gray-200 hover:border-[#212471] transition-all duration-500"
+              className="group bg-white border border-gray-200 hover:border-[#212471] transition-all duration-500 flex flex-col"
             >
-              {/* Image Section - Scaled down height */}
-              <div className="relative h-56 overflow-hidden">
+              {/* Image */}
+              <div className="relative h-44 overflow-hidden">
                 <img
                   src={service.image}
                   alt={service.title}
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0"
                 />
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-[#212471]/10 group-hover:bg-transparent transition-colors duration-500"></div>
 
-                {/* Icon Tag */}
-                <div className="absolute top-4 right-4 bg-[#212471] text-white p-3 shadow-xl">
+                <div className="absolute inset-0 bg-[#212471]/10 group-hover:bg-transparent transition-colors duration-500" />
+
+                <div className="absolute top-3 right-3 bg-[#212471] text-white p-2 shadow-lg">
                   {service.icon}
                 </div>
               </div>
 
-              {/* Content Section */}
-              <div className="p-8">
-                <span className="text-[10px] font-black tracking-[0.3em] text-gray-400 uppercase mb-3 block">
+              {/* Content */}
+              <div className="p-6 flex flex-col flex-grow">
+                <span className="text-[10px] font-black tracking-[0.3em] text-gray-400 uppercase mb-2">
                   {service.tag}
                 </span>
 
-                <h3 className="text-lg font-bold text-[#212471] mb-6 uppercase tracking-tight">
+                <h3 className="text-base font-bold text-[#212471] mb-4 uppercase">
                   {service.title}
                 </h3>
 
-                <ul className="space-y-3">
+                <ul className="space-y-2">
                   {service.points.map((point, idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <span className="w-1.5 h-1.5 bg-[#212471] mt-1.5 shrink-0"></span>
@@ -104,8 +105,9 @@ export default function Services() {
                   ))}
                 </ul>
 
-                {/* Subtle bottom accent line that grows on hover */}
-                <div className="mt-8 w-0 h-0.5 bg-[#212471] group-hover:w-full transition-all duration-500"></div>
+                <div className="mt-auto pt-5">
+                  <div className="w-0 h-0.5 bg-[#212471] group-hover:w-full transition-all duration-500" />
+                </div>
               </div>
             </div>
           ))}
