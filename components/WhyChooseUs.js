@@ -1,95 +1,95 @@
 import React from "react";
-import { FaTruck, FaShip, FaPlane } from "react-icons/fa";
-import { MdOutlinePrecisionManufacturing } from "react-icons/md";
-import { PiAnchorBold } from "react-icons/pi";
+import {
+  FaHardHat,
+  FaHandshake,
+  FaUserTie,
+  FaUsers,
+  FaClipboardCheck,
+} from "react-icons/fa";
 
-const services = [
+const whyChooseUsData = [
   {
-    title: "LAND FREIGHT",
-    description:
-      "Provides air freight services to meet up with your transportation needs, professional services to deliver your air freight fast and safe to its final destination.",
-    icon: <FaTruck size={30} />,
-    highlighted: true,
+    title: "Proven track record on **multi-million-rand** projects",
+    // icon: <FaHardHat size={20} />,
   },
   {
-    title: "SEA FREIGHT",
-    description:
-      "Provides air freight services to meet up with your transportation needs, professional services to deliver your air freight fast and safe to its final destination.",
-    icon: <FaShip size={30} />,
+    title:
+      "Experience with **mining houses**, municipalities, and **tier-1 contractors**",
+    // icon: <FaHandshake size={20} />,
   },
   {
-    title: "AIR FREIGHT",
-    description:
-      "Provides air freight services to meet up with your transportation needs, professional services to deliver your air freight fast and safe to its final destination.",
-    icon: <FaPlane size={30} />,
+    title: "Strong **technical leadership** and on-site management",
+    // icon: <FaUserTie size={20} />,
   },
   {
-    title: "PROJECT CARGO",
-    description:
-      "Provides air freight services to meet up with your transportation needs, professional services to deliver your air freight fast and safe to its final destination.",
-    icon: <MdOutlinePrecisionManufacturing size={30} />,
+    title: "Commitment to **local empowerment** and job creation",
+    // icon: <FaUsers size={20} />,
   },
   {
-    title: "SHIPPING AGENCY",
-    description:
-      "Provides air freight services to meet up with your transportation needs, professional services to deliver your air freight fast and safe to its final destination.",
-    icon: <PiAnchorBold size={30} />,
+    title: "**Reliable delivery** within time and budget",
+    // icon: <FaClipboardCheck size={20} />,
   },
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-[#001D4A] py-20 px-6 md:px-12 lg:px-24 text-white font-sans overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        {/* Main Grid Container */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* 1. Header Block (Top Left) */}
-          <div className="flex flex-col justify-center">
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-              Unmatched <br />
-              Services. <br />
-              Unmatched <br />
-              Excellence.
+    <section className="bg-[#F1F1F1] py-20 text-[#212471]">
+      {/* Container matches Projects section width and padding exactly */}
+      <div className="max-w-7xl mx-auto px-4 md:px-5 lg:px-6">
+        
+
+        {/* Grid Container */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Header Block with Project-style text hierarchy */}
+          <div className="flex flex-col">
+            <h2 className="text-3xl md:text-4xl font-bold leading-[1.1] tracking-tight text-[#212471]">
+              WHY TEMBO GROUP <br />
+              {/* Trust & <br />
+              Expertise. */}
             </h2>
+            <div className="mt-3 w-12 h-0.5 bg-[#212471] rounded-xl"></div>
+           
           </div>
 
-          {/* 2. Land Freight (Top Middle/Right) */}
-          <ServiceBox service={services[0]} />
-
-          {/* 3. Sea Freight (Top Right) */}
-          <ServiceBox service={services[1]} />
-
-          {/* 4. Air Freight (Bottom Row - now under the text) */}
-          <ServiceBox service={services[2]} />
-
-          {/* 5. Project Cargo (Bottom Row) */}
-          <ServiceBox service={services[3]} />
-
-          {/* 6. Shipping Agency (Bottom Row) */}
-          <ServiceBox service={services[4]} />
+          {/* Service Cards */}
+          {whyChooseUsData.map((item, index) => (
+            <ServiceBox key={index} item={item} />
+          ))}
         </div>
       </div>
     </section>
   );
 }
 
-// Sub-component to keep the code clean
-function ServiceBox({ service }) {
+function ServiceBox({ item }) {
+  const renderTitle = (text) => {
+    const parts = text.split(/(\*\*.*?\*\*)/g);
+    return parts.map((part, i) =>
+      part.startsWith("**") && part.endsWith("**") ? (
+        <span key={i} className="font-black text-[#212471]">
+          {part.replace(/\*\*/g, "")}
+        </span>
+      ) : (
+        part
+      ),
+    );
+  };
+
   return (
-    <div
-      className={`p-10 border transition-all duration-300 ${
-        service.highlighted
-          ? "border-white ring-1 ring-white shadow-2xl"
-          : "border-white/20 hover:border-white/60"
-      }`}
-    >
-      <div className="mb-6 opacity-90">{service.icon}</div>
-      <h3 className="text-[14px] font-bold tracking-[0.2em] mb-4 uppercase">
-        {service.title}
-      </h3>
-      <p className="text-[13px] text-gray-400 leading-relaxed font-light">
-        {service.description}
-      </p>
+    <div className="rounded-xl group p-4 border border-[#212471]/10 bg-white/40 transition-all duration-500 flex flex-col justify-between min-h-20 hover:bg-white hover:shadow-lg">
+      <div>
+        <div className="text-[#212471]/40 mb-5 group-hover:text-[#212471] transition-colors duration-500">
+          {item.icon}
+        </div>
+
+        <h4 className="text-[13px] leading-relaxed text-[#212471]/70 font-medium uppercase tracking-wider">
+          {renderTitle(item.title)}
+        </h4>
+      </div>
+
+      <div className="mt-4 flex justify-end">
+        <div className="w-6 h-[1px] bg-[#212471]/10 group-hover:w-10 group-hover:bg-[#212471]/40 transition-all"></div>
+      </div>
     </div>
   );
 }
