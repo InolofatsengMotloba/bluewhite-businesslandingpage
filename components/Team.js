@@ -1,58 +1,47 @@
 import React from "react";
 
 const departments = [
-  "OPERATIONS MANAGEMENT",
-  "STRATEGIC PLANNING",
-  "CUSTOMER RELATIONS",
-  "COMPLIANCE & SECURITY",
-  "GLOBAL PARTNERSHIPS",
+  "Civil Engineer",
+  "Quantity Surveyor",
+  "Site Agents & Plant Management",
+  "Safety Officer & Safety Representative",
+  "HR, Administration & Project Support",
 ];
 
 export default function Team() {
   return (
-    <section className="bg-[#001D4A] pt-24 pb-16 px-6 md:px-12 lg:px-24 text-white font-sans">
-      <div className="max-w-7xl mx-auto">
-        {/* Header Area */}
-        <div className="max-w-3xl mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-            Our Departments
-          </h2>
-          {/* Description 1: Under the Title */}
-          <p className="text-gray-400 text-sm leading-relaxed max-w-xl">
-            Our structure is built on specialized expertise, ensuring that every
-            facet of the supply chain is managed by dedicated professionals
-            committed to operational excellence.
-          </p>
-        </div>
+    <section id="team" className="bg-[#F1F1F1] pt-20 pb-10 px-6 text-[#212471]">
+      <div className="max-w-7xl mx-auto px-4 md:px-5 lg:px-6">
+        {/* Two-column internal layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+          {/* LEFT — Heading & description */}
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight leading-tight">
+              OUR TEAM & CAPACITY
+            </h2>
+            <div className="mt-3 w-12 h-0.5 bg-[#212471] rounded-xl" />
 
-        {/* The List (No Blocks) */}
-        <div className="border-t border-white/10">
-          {departments.map((dept, index) => (
-            <div
-              key={index}
-              className="group flex items-center justify-between py-6 border-b border-white/10 hover:bg-white/2 transition-colors"
-            >
-              <div className="flex items-center gap-6">
-                <span className="text-[10px] font-bold text-gray-500 tracking-widest">
+            <p className="mt-6 text-sm text-[#212471]/60 max-w-md">
+              This structure ensures compliance, safety, quality control, and
+              efficient execution across all projects.
+            </p>
+          </div>
+
+          {/* RIGHT — Team list */}
+          <div className="border-t border-[#212471]/20 lg:border-t-0 lg:border-l lg:pl-10">
+            {departments.map((dept, index) => (
+              <div
+                key={index}
+                className="group flex items-center gap-6 py-5 border-b border-[#212471]/20"
+              >
+                <span className="text-[11px] font-bold tracking-widest text-[#212471]/40">
                   0{index + 1}
                 </span>
-                <h3 className="text-lg md:text-xl font-bold tracking-widest group-hover:translate-x-2 transition-transform duration-300">
+                <h3 className="text-sm md:text-base font-semibold tracking-wide group-hover:translate-x-1 transition-transform">
                   {dept}
                 </h3>
               </div>
-              <div className="hidden md:block w-12 h-px bg-white/20 group-hover:w-20 transition-all duration-500"></div>
-            </div>
-          ))}
-        </div>
-
-        {/* Description 2: Below Everything */}
-        <div className="mt-16 flex justify-end">
-          <div className="max-w-md text-right">
-            <p className="text-gray-400 text-sm leading-relaxed italic">
-              "Unified by a singular goal: to provide seamless logistics
-              solutions that empower global commerce and exceed client
-              expectations at every milestone."
-            </p>
+            ))}
           </div>
         </div>
       </div>
