@@ -52,9 +52,8 @@ export default function About() {
             </p>
 
             <p className="text-gray-600 text-sm md:text-base leading-relaxed border-l-2 border-[#212471] pl-6 ">
-              "We don't just move cargo; we move the foundations of industry.
-              Our expertise lies in the complex, the heavy, and the
-              time-critical."
+              "We build more than infrastructure. We create durable foundations
+              that support growth, industry, and community development."
             </p>
           </div>
 
