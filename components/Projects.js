@@ -19,9 +19,45 @@ const ongoingProjects = [
     year: "2026",
     location: "Rustenburg, SA",
   },
+  {
+    title: "Coal and Material Handling",
+    description: "Material handling operations",
+    client: "AfriSam",
+    value: "R7.9 million",
+  },
+  {
+    title: "Rooiwal Ash Handling and Transportation",
+    description: "Ash handling and transportation services",
+    client: "Infratech",
+    value: "R79 million",
+  },
+  {
+    title: "WPL Demolitions and Earthworks",
+    description: "Demolition and earthworks",
+    client: "Sibanye Stillwater",
+    value: "R3.8 million",
+  },
 ];
 
 const completedProjects = [
+  {
+    title: "Anglo American Platinum PMR - Backfilling Storage Pad",
+    description: "Backfilling storage pad",
+    client: "WBHO",
+    value: "R2.3 million",
+  },
+  {
+    title: "Anglo American Platinum PMR - Washplant and Internal Roads",
+    description: "Earthworks for proposed washplant and internal roads",
+    client: "WBHO",
+    value: "R4 million",
+  },
+  {
+    title: "Pendospan Chrome Mine - Load and Haul",
+    description: "Load and haul chromium ore",
+    client: "Pendospan",
+    value: "R15 million",
+  },
   {
     title: "Internal Roads & Paving - Reagile Ext. 6, Koster",
     client: "Kgetlengrivier Local Municipality",
