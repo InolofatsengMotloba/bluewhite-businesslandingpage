@@ -17,7 +17,7 @@ export default function Hero() {
 
           <div className="relative">
             <span className="text-[#212471] text-xs font-black tracking-[0.5em] uppercase mb-6 block">
-              Rustenburg, South Africa
+              South Africa, Botswana, Namibia
             </span>
             <h1 className="text-4xl lg:text-7xl font-bold text-[#212471] leading-[1.1] tracking-tighter">
               Earthworks & <br />
