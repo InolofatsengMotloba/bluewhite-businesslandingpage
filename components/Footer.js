@@ -5,8 +5,6 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaEnvelope,
-  FaMapMarkerAlt,
-  FaPhone,
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -80,25 +78,78 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4 className="mb-4 font-semibold">Contact Us</h4>
-            <ul className="space-y-3 text-sm text-white/80">
-              <li className="flex items-center gap-2">
+            <div className="space-y-3 text-sm text-white/80">
+              <div className="flex items-center gap-2">
                 <FaEnvelope size={14} />
                 thetgi@outlook.com
-              </li>
-              <li className="flex items-center gap-2">
-                <FaPhone size={14} />
-                (061) 517-7507
-              </li>
-              <li className="flex items-start gap-2">
-                <FaMapMarkerAlt size={14} className="mt-1" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Addresses */}
+        <div className="mt-12 border-t border-white/20 pt-8">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <h5 className="text-xs font-semibold mb-2 text-white/90">
+                Head Office
+              </h5>
+              <p className="text-xs text-white/70 leading-relaxed">
+                20 Kruis Street
+                <br />
                 Rustenburg, North West
-              </li>
-            </ul>
+                <br />
+                0299
+              </p>
+            </div>
+            <div>
+              <h5 className="text-xs font-semibold mb-2 text-white/90">
+                Satellite Office 1
+              </h5>
+              <p className="text-xs text-white/70 leading-relaxed">
+                Office no. 420
+                <br />
+                Lakeview Terrace
+                <br />
+                Penny Ln.
+                <br />
+                Richards Bay
+                <br />
+                3900
+              </p>
+            </div>
+            <div>
+              <h5 className="text-xs font-semibold mb-2 text-white/90">
+                Satellite Office 2
+              </h5>
+              <p className="text-xs text-white/70 leading-relaxed">
+                56 Soetdooring
+                <br />
+                Kathu
+                <br />
+                Northern Cape
+                <br />
+                8446
+              </p>
+            </div>
+            <div>
+              <h5 className="text-xs font-semibold mb-2 text-white/90">
+                International Office
+              </h5>
+              <p className="text-xs text-white/70 leading-relaxed">
+                Plot 35883
+                <br />
+                Block 8<br />
+                Gaborone
+                <br />
+                Botswana
+              </p>
+            </div>
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 flex flex-col gap-4 border-t border-white/20 pt-6 text-sm text-white/70 md:flex-row md:justify-between">
+        <div className="mt-8 flex flex-col gap-4 border-t border-white/20 pt-6 text-sm text-white/70 md:flex-row md:justify-between">
           <p>
             © {new Date().getFullYear()} The Tembo Group Investment. All rights
             reserved.
