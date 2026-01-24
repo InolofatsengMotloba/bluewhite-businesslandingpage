@@ -71,7 +71,7 @@ export default function Hero() {
             <div className="bg-[#212471] flex-1 flex flex-col justify-center px-10 text-white">
               <h3 className="text-3xl font-bold">100%</h3>
               <p className="text-[10px] tracking-widest uppercase opacity-60">
-                Black Youth Owned
+                Black Owned
               </p>
             </div>
 
