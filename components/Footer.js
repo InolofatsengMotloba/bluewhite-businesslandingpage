@@ -1,11 +1,4 @@
-import Link from "next/link";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedinIn,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -24,33 +17,6 @@ export default function Footer() {
               Partner with The Tembo Group Investment for dependable civil
               construction and earthworks solutions.
             </p>
-
-            <div className="flex space-x-4">
-              <Link href="https://facebook.com" target="_blank">
-                <FaFacebookF
-                  size={14}
-                  className="text-white/70 hover:text-blue-600"
-                />
-              </Link>
-              <Link href="https://twitter.com" target="_blank">
-                <FaTwitter
-                  size={14}
-                  className="text-white/70 hover:text-blue-400"
-                />
-              </Link>
-              <Link href="https://instagram.com" target="_blank">
-                <FaInstagram
-                  size={14}
-                  className="text-white/70 hover:text-pink-600"
-                />
-              </Link>
-              <Link href="https://linkedin.com" target="_blank">
-                <FaLinkedinIn
-                  size={14}
-                  className="text-white/70 hover:text-[#0A66C2]"
-                />
-              </Link>
-            </div>
           </div>
 
           {/* Navigation */}
