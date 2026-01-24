@@ -25,7 +25,7 @@ export default function About() {
           <div className="absolute -bottom-10 -right-10 bg-[#212471] text-white p-8 hidden md:block">
             <p className="text-4xl font-bold italic">100%</p>
             <p className="text-[10px] tracking-widest uppercase mt-2">
-              Black Youth <br /> Owned
+              Black <br /> Owned
             </p>
           </div>
         </div>
