@@ -30,7 +30,7 @@ export default function Purpose() {
           {/* Vision Side */}
           <div className="md:pl-16 flex flex-col justify-center mt-12 md:mt-0">
             <span className="text-[10px] font-black tracking-[0.4em] text-white/40 uppercase mb-4">
-              02. Our Vision
+              Our Vision
             </span>
             <h2 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight ">
               Defining the Future Standard.
