@@ -36,7 +36,7 @@ export default function Purpose() {
               Defining the Future Standard.
             </h2>
             <p className="text-sm md:text-base text-gray-400 leading-relaxed font-light max-w-md">
-              To become a locally recognised and empowering construction
+              To become a globally recognised and empowering construction
               powerhouse, delivering impeccable services within time and budget.
             </p>
           </div>
