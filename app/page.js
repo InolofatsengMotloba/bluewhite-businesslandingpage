@@ -24,13 +24,15 @@ export default function Home() {
       {/* CTA + Footer shared background */}
       <section className="relative w-full overflow-hidden">
         {/* Background image */}
-        <Image
-          src="/BG10.jpg"
-          alt="Footer background"
-          fill
-          priority
-          className="object-cover"
-        />
+        <div className="absolute inset-0">
+          <Image
+            src="/BG10.jpg"
+            alt="Footer background"
+            fill
+            priority
+            className="object-cover object-center"
+          />
+        </div>
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-[#212471]/90" />
