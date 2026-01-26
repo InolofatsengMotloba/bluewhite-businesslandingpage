@@ -36,7 +36,7 @@ export default function Action() {
 
             {/* Action */}
             <a
-              href="tel:+27615177507"
+              href="mailto:thetgi@outlook.com"
               className="inline-flex items-center justify-center rounded-md bg-white px-5 py-2 text-sm font-medium text-[#212471] hover:bg-white/90 transition-colors"
             >
               Get in touch
