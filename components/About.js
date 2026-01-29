@@ -8,11 +8,11 @@ export default function About() {
     >
       <div className="max-w-7xl mx-auto px-4 md:px-5 lg:px-6 flex flex-col lg:flex-row items-center gap-16">
         {/* Left: Image Container with Accent */}
-        <div className="lg:w-1/2 relative">
+        <div className="lg:w-1/2 relative w-full">
           {/* Subtle Decorative Box behind the image */}
           <div className="absolute -top-6 -left-6 w-32 h-32 border-l-2 border-t-2 border-[#212471]/20"></div>
 
-          <div className="relative h-100 md:h-125 w-full grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
+          <div className="relative h-[400px] md:h-[500px] lg:h-[600px] w-full grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
             <Image
               src="/BG1.jpg" // Replace with your actual image path
               alt="Logistics Operations"
@@ -56,12 +56,6 @@ export default function About() {
               that support growth, industry, and community development."
             </p>
           </div>
-
-          {/* <div className="pt-4">
-            <button className="px-8 py-4 bg-[#212471] text-white text-xs font-bold tracking-[0.2em] uppercase hover:bg-[#2a2e8c] transition-colors">
-              Learn More About Us
-            </button>
-          </div> */}
         </div>
       </div>
     </section>
