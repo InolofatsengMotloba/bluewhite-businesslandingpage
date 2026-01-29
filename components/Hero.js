@@ -1,7 +1,16 @@
+"use client";
+
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 
 export default function Hero() {
+  const scrollToContact = () => {
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <section
       id="home"
@@ -31,7 +40,10 @@ export default function Hero() {
             </p>
 
             <div className="mt-12 flex flex-wrap items-center gap-6">
-              <button className="bg-[#212471] text-white text-[13px] font-bold tracking-[0.2em] uppercase px-10 py-5 hover:bg-[#2a2e8c] transition-all shadow-xl">
+              <button
+                onClick={scrollToContact}
+                className="bg-[#212471] text-white text-[13px] font-bold tracking-[0.2em] uppercase px-10 py-5 hover:bg-[#2a2e8c] transition-all shadow-xl cursor-pointer"
+              >
                 Start A Project
               </button>
               {/* <button className="group text-[#212471] text-[13px] font-bold tracking-[0.2em] uppercase flex items-center gap-3">
